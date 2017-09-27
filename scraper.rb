@@ -14,6 +14,8 @@ EOQ
 ids = EveryPolitician::Wikidata.sparql(query)
 raise 'No ids' if ids.empty?
 
+ids << 'Q1486' # Buenos Aires city is also a legislative district, though not a province
+
 ScraperWiki.sqliteexecute('DROP TABLE data') rescue nil
 data = Wikidata::Areas.new(ids: ids).data
 ScraperWiki.save_sqlite(%i(id), data)
