@@ -56,7 +56,7 @@ GEM
       unf (>= 0.0.5, < 1.0.0)
     everypolitician-popolo (0.8.0)
       require_all
-    excon (0.62.0)
+    excon (0.76.0)
     faraday (0.15.2)
       multipart-post (>= 1.2, < 3)
     faraday-cookie_jar (0.0.6)
